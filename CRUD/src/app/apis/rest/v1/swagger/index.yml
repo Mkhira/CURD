@@ -1,0 +1,14 @@
+
+## Import all swagger yml files 
+files: !include include.d/*.yaml
+
+
+/:
+  get:
+    description: Hello World
+    responses:
+      200:
+          description: Hello World !
+          content:
+             application/text
+   

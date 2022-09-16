@@ -1,0 +1,99 @@
+tags:
+  name: Users
+  description: The users managing API
+
+paths:
+  /v1/user/signIn:
+    post:
+      description: "Use to signin"
+      tags: [Users]
+      parameters:
+        - name: body
+          in: body
+          schema: 
+            type: object
+            required:
+              - email
+              - password
+            properties:
+              email: 
+                type: string
+              password: 
+                type: string
+          required: true
+          description: The user email
+      responses:
+        200: 
+            description: loggedin successfully
+            content: 
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                example:
+                    id: 1
+                    name: test      
+        400: 
+            description: Bad request 
+        401: 
+            description: Email not verified
+
+
+
+  /v1/user/signUp:
+    post:
+      description: "Use to add new user"
+      tags: [Users]
+      parameters:
+        - name: body
+          in: body
+          schema:
+            type: object
+            required: 
+              - email
+              - name
+              - password
+              - confirmPassword
+              - role
+            properties: 
+              name: 
+                type: object
+                required: 
+                  - firstName
+                  - lastName
+                properties:
+                  firstName: 
+                    type: string
+                  lastName: 
+                    type: string
+              email:
+                type: string
+              password:
+                type: string  
+              confirmPassword:
+                type: string  
+              role:
+                type: 
+                enum:
+                  - admin
+                  - user
+      responses:
+        200: 
+          description: Created sucessfully
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  example:
+                    id: 1
+                    name: test      
+          400: 
+            description: Bad request 
+
+
+
