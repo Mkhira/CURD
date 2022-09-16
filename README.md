@@ -1,18 +1,13 @@
-# curd
+# CURD App
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# CURD
-CURD APP
+# First Clone App 
+  2- go to the app directory open CURD
+  3- open cmd inside CURD and write cmd 'npm i' app will install packges
+  4- after that run 'npm run dev' this will run the serve on local host
+  
+# Notes
+  1- Make sure you setup npm on your pc
+  2- Make sure to change the ip in AppConstant class to you pc ip 
+  3- Make sure to close fire wall
+  
+  
